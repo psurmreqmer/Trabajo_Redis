@@ -1,0 +1,43 @@
+from funciones import *
+
+if __name__ == "__main__":
+    #1
+    crear_registros()
+    #2
+    mostrar_numero_claves()
+    #3
+    mostrar_registro_por_clave()
+    #4
+    actualizar_valor_clave()
+    #5
+    eliminar_clave()
+    #6
+    mostrar_todas_claves()
+    #7
+    mostrar_todos_valores()
+    #8
+    mostrar_patron_asterisco()
+    #9
+    mostrar_patron_corchetes()
+    #10
+    mostrar_patron_interrogacion()
+    #11
+    filtrar_valores_por_valor()
+    #12
+    actualizar_notas()
+    #13
+    eliminar_notas_bajas()
+    #14
+    crear_json_habilidades()
+    #15
+    filtrar_habilidades_json()
+    #16
+    crear_lista()
+    #17
+    filtrar_lista()
+    #18
+    crear_estudiantes_con_indice()
+    #19
+    buscar_estudiantes()
+    #20
+    groupby_estudiantes()

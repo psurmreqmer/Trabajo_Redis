@@ -1,0 +1,6 @@
+# Dockerfile-redis
+FROM redis/redis-stack:latest
+
+# 6379 → Redis
+# 8001 → RedisInsight (interfaz web)
+EXPOSE 6379 8001
