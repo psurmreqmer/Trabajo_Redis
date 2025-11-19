@@ -1,5 +1,6 @@
 import redis
-import mariadb
+#import mariadb
+import mysql.connector
 from redis.commands.json.path import Path
 from redis.commands.search.field import TextField, NumericField, TagField
 from redis.commands.search.index_definition import IndexDefinition, IndexType
@@ -46,7 +47,7 @@ except Exception as e:
 # ----------------------------
 def conexion_mariadb():
     try:
-        conn = mariadb.connect(
+        """ conn = mariadb.connect(
             user="Usuario",
             password="Usuario",
             host="localhost",
@@ -54,8 +55,17 @@ def conexion_mariadb():
             database="estudiantes"
         )
         cursor = conn.cursor(dictionary=True)
-        print("Conexión a MariaDB exitosa")
+        print("Conexión a MariaDB exitosa") """
+        config = {
+            "user": "Usuario",
+            "password": "Usuario",
+            "host": "localhost",
+            "database": "estudiantes"
+        }
+
+        conn = mysql.connector.connect(**config)
+        cursor = conn.cursor(dictionary=True)  
         return conn, cursor
-    except mariadb.Error as e:
+    except mysql.Error as e:
         print(f"Error al conectar a MariaDB: {e}")
         return None, None

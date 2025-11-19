@@ -1,0 +1,14 @@
+# Usamos la imagen oficial de MariaDB
+FROM mariadb:11
+
+# Variables de entorno para usuario, contraseña y base de datos
+ENV MARIADB_ROOT_PASSWORD=Usuario
+ENV MARIADB_DATABASE=estudiantes
+ENV MARIADB_USER=Usuario
+ENV MARIADB_PASSWORD=Usuario
+
+# Copiamos el script de inicialización
+COPY init.sql /docker-entrypoint-initdb.d/
+
+# Exponer el puerto
+EXPOSE 3306
